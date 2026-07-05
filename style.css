@@ -14,7 +14,12 @@
   --font-mono: 'IBM Plex Mono', monospace;
 }
 
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 body {
   font-family: var(--font-body);
@@ -34,7 +39,7 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 
-section, header, footer {
+section, header {
   max-width: 900px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
@@ -42,13 +47,17 @@ section, header, footer {
 
 /* ---------- Header ---------- */
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--border);
-  max-width: none;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    max-width: none;
+    position: sticky;
+    top: 0;
+    background: var(--paper);
+    z-index: 10;
+  }
 
 .logo {
   font-family: var(--font-display);
@@ -61,6 +70,11 @@ section, header, footer {
   margin-left: 1.5rem;
   font-size: 0.95rem;
 }
+
+.site-header nav a.active {
+    color: var(--accent);
+    font-weight: 500;
+  }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -93,8 +107,41 @@ section, header, footer {
   max-width: 42ch;
 }
 
+/* ---------- Hero contact info ---------- */
+.hero-contact {
+    border-top: 1px solid var(--border);
+  }
+  
+  .contact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .contact-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+  
+  .contact-value {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  
+  span.contact-value {
+    color: var(--ink-soft);
+  }
+
+  
 /* ---------- Ledger (signature element) ---------- */
-.hero-ledger, .case-ledger {
+.case-ledger {
   border-top: 1px solid var(--border);
 }
 
