@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+:root {
+  --paper: #F2F4F1;
+  --ink: #1B2420;
+  --ink-soft: #414A44;
+  --muted: #6B7268;
+  --border: #D8DAD4;
+  --accent: #146356;
+  --accent-tint: #E4EDE9;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+section, header, footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  max-width: none;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.site-header nav a {
+  color: var(--ink-soft);
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-statement {
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+  max-width: 42ch;
+}
+
+/* ---------- Ledger (signature element) ---------- */
+.hero-ledger, .case-ledger {
+  border-top: 1px solid var(--border);
+}
+
+.ledger-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.ledger-value {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.ledger-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+/* ---------- About ---------- */
+.about p {
+  max-width: 65ch;
+  color: var(--ink-soft);
+}
+
+/* ---------- Case studies ---------- */
+.case-studies h2 {
+  margin-bottom: 2rem;
+}
+
+.case-study {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: #fff;
+}
+
+.case-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.case-study h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-block {
+  margin-bottom: 1.5rem;
+}
+
+.case-block h4 {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.case-block p, .case-block li {
+  color: var(--ink-soft);
+}
+
+.case-block ul {
+  padding-left: 1.2rem;
+}
+
+.case-block li { margin-bottom: 0.4rem; }
+
+.case-ledger {
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+}
+
+.case-ledger .ledger-row:last-child { border-bottom: none; }
+
+/* ---------- Skills ---------- */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills-list li {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: var(--accent-tint);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+/*
