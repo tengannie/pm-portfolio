@@ -222,6 +222,7 @@ section[id] {
 
 .project-block h4 {
   font-family: var(--font-mono);
+  font-weight: bold;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -296,7 +297,7 @@ section[id] {
   
   .timeline-role {
     font-weight: 500;
-    color: var(--ink);
+    color: var(--accent);
   }
   
   a.timeline-role {
